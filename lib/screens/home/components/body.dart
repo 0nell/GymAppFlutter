@@ -9,12 +9,13 @@ class Body extends StatelessWidget {
   }
 
   Widget _buttonList() {
-    final List<String> _entries = <String>["Programmes", "Exercises"];
+    final List<String> _entries = <String>["Programmes", "Workouts", "Exercises"];
+    final List<String> _routes = <String>["programmes", "workouts", "exercises"];
 
     return ListView.separated(
       padding: const EdgeInsets.all(10),
       itemCount: _entries.length,
-      itemBuilder: (BuildContext context, int index) {
+      itemBuilder: (context, int index) {
         return FractionallySizedBox(
           widthFactor: .66,
           child: RaisedButton(
@@ -22,7 +23,9 @@ class Body extends StatelessWidget {
             elevation: 6,
             focusElevation: 12,
             textColor: Colors.white,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, "/${_routes[index]}");
+            },
           ),
         );
       },

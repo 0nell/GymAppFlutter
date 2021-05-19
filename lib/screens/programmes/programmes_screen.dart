@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gymapp/screens/programmes/components/appbar.dart';
-import 'package:gymapp/screens/programmes/components/body.dart';
+import 'package:gymapp/screens/programmes/components/programme_body.dart';
 
 class ProgrammesScreen extends StatefulWidget {
   @override
@@ -14,10 +14,12 @@ class _ProgrammesScreenState extends State<ProgrammesScreen> {
     return BlocProvider(
       create: (BuildContext context) {},
       child: Scaffold(
-        appBar: header(),
-        body: Body(),
+        appBar: header(context),
+        body: ProgrammeBody(),
         floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, "/addProgrammes");
+          },
           tooltip: "Add Programme",
           child: Icon(Icons.add),
         ),

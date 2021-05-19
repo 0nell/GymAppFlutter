@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
-AppBar header() => AppBar(
+AppBar header(BuildContext context) => AppBar(
       title: Text("Programmes"),
-      leading: IconButton(icon: Icon(Icons.arrow_back), onPressed: () {}),
+      leading: IconButton(icon: Icon(Icons.arrow_back), onPressed: () {
+        Navigator.pop(context);
+      }),
       actions: [
         IconButton(
             icon: Icon(Icons.calendar_today),

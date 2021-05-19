@@ -6,12 +6,17 @@ ThemeData appTheme() => ThemeData(
     primaryColorLight: Color.fromRGBO(99, 82, 255, 1),
     accentColor: Color.fromRGBO(225, 225, 225, 1),
     buttonColor: Color.fromRGBO(99, 82, 255, 1),
+    appBarTheme: AppBarTheme(
+      color: Color.fromRGBO(0, 0, 156, 1),
+        iconTheme: IconThemeData(
+          color: Colors.white,
+        )
+    ),
     dividerColor: Colors.white,
     backgroundColor: Colors.white,
     floatingActionButtonTheme: FloatingActionButtonThemeData(
       backgroundColor: Color.fromRGBO(99, 82, 255, 1),
       foregroundColor: Color.fromRGBO(225, 225, 225, 1),
     ),
-    iconTheme: IconThemeData(
-      color: Colors.white,
-    ));
+
+);

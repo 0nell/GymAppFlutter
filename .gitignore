@@ -63,3 +63,6 @@ doc/api/
 *.js.deps
 *.js.map
 
+#Test file for screens
+!/lib/test_main.dart
+!/plan.docx
