@@ -20,7 +20,7 @@ class GymApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: "GymApp",
           theme: appTheme(),
-          initialRoute: "programmes",
+          initialRoute: "",
           routes: routes,
         ));
   }
